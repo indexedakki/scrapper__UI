@@ -25,7 +25,7 @@ const SignUpForm = () => {
         setError(null);
 
         try {
-            const response = await axios.post('https://scrapper-genai.onrender.com0/users', formData);
+            const response = await axios.post('https://scrapper-genai.onrender.com/users', formData);
 
             console.log('User registered successfully');
             navigate('/LoginPage', { state: { formData } });
