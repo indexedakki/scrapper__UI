@@ -25,7 +25,7 @@ const SignUpForm = () => {
         setError(null);
 
         try {
-            const response = await axios.post('http://localhost:8000/users', formData);
+            const response = await axios.post('https://scrapper-genai.onrender.com0/users', formData);
 
             console.log('User registered successfully');
             navigate('/LoginPage', { state: { formData } });
@@ -85,7 +85,7 @@ const SignUpForm = () => {
                         <button
                             type="submit"
                             disabled={isLoading}
-                            className={`btn btn-signup ${isLoading ? 'loading' : ''}`}
+                            className={`signup-btn ${isLoading ? 'loading' : ''}`}
                         >
                             {isLoading ? 'Registering...' : 'Sign Up'}
                         </button>
@@ -94,7 +94,7 @@ const SignUpForm = () => {
                         <button
                             onClick={handleLogin}
                             disabled={isLoading}
-                            className={`btn btn-login ${isLoading ? 'loading' : ''}`}
+                            className={`login-btn ${isLoading ? 'loading' : ''}`}
                         >
                             {isLoading ? 'Logging In...' : 'Log In'}
                         </button>

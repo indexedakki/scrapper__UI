@@ -33,7 +33,7 @@ function HomePage() {
 
 
     try {
-      const response = await fetch('http://localhost:8000/scrape', {
+      const response = await fetch('https://scrapper-genai.onrender.com/scrape', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -64,7 +64,7 @@ function HomePage() {
     setError(null);
 
     try {
-      const response = await axios.post('http://localhost:8000/logout', {
+      const response = await axios.post('https://scrapper-genai.onrender.com/logout', {
         });
     } catch (error) {
       console.error('Error fetching data:', error);
