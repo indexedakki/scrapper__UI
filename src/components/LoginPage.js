@@ -24,7 +24,7 @@ const LoginForm = () => {
         setError(null);
 
         try {
-            const response = await axios.post('https://scrapper-genai.onrender.com/checkUsers', formData);
+            const response = await axios.post('http://localhost:8000/checkUsers', formData);
 
             console.log('User logged in successfully');
             // You might want to store the token or user data here

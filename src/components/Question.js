@@ -18,7 +18,7 @@ function Question() {
     setError(null);
 
     try {
-      const response = await axios.post('https://scrapper-genai.onrender.com/answer', {
+      const response = await axios.post('http://localhost:8000/answer', {
         question: question
       });
 
